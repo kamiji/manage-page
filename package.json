@@ -1,0 +1,36 @@
+{
+  "name": "manage-page",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+      "del": "^1.1.1",
+      "gulp-autoprefixer": "^2.2.0",
+      "gulp-header": "^1.2.2",
+      "gulp": "^3.8.11",
+      "gulp-jade": "^1.0.0",
+      "gulp-livereload": "^3.8.0",
+      "gulp-rev": "^3.0.1",
+      "gulp-uglify": "^1.2.0",
+      "gulp-rev-collector": "^0.1.4",
+      "node-libs-browser": "^0.5.0",
+      "st": "^0.5.3",
+      "webpack": "^1.9.4",
+      "gulp-stylus": "^2.0.1",
+      "gulp-util": "^3.0.4"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamiji/manage-page.git"
+  },
+  "author": "kamiji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamiji/manage-page/issues"
+  },
+  "homepage": "https://github.com/kamiji/manage-page"
+}

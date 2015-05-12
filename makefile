@@ -1,0 +1,21 @@
+dev:
+	@mkdir app
+	@mkdir app/src
+	@mkdir app/src/images
+	@mkdir app/src/jade
+	@mkdir app/src/jade/layout
+	@mkdir app/src/jade/mixin
+	@mkdir app/src/jade/pages
+	@mkdir app/src/js
+	@mkdir app/src/js/common
+	@mkdir app/src/js/lib
+	@mkdir app/src/js/pages
+	@mkdir app/src/js/service
+	@mkdir app/src/js/templete
+	@mkdir app/src/styl
+	@mkdir app/src/styl/base
+	@mkdir app/src/styl/common
+	@mkdir app/src/styl/fonts
+	@mkdir app/src/styl/layout
+	@mkdir app/src/styl/pages
+	@mkdir app/src/styl/themes
