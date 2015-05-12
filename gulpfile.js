@@ -42,7 +42,7 @@ gulp.task("webpack", function(callback) {
 });
 
 //注意这样生成的js页面上引用的话是用build这个目录的资源,而不是pages目录
-gulp.task('js',['webpack'],function(){
+gulp.task('js',['webpack','move'],function(){
     gulp.src('app/src/js/**/*.js')
     .pipe(header(head))
     .pipe(gulp.dest('app/dest/js'))
@@ -50,7 +50,7 @@ gulp.task('js',['webpack'],function(){
 });
 
 //生成文件名的hash code,生成manifest
-gulp.task('js_build',['webpack'],function(){
+gulp.task('js_build',['webpack','move'],function(){
     gulp.src('app/src/js/**/*.js')
     .pipe(uglify())
     .pipe(header(head))
@@ -110,9 +110,14 @@ gulp.task('build',['del','styl_build','js_build','images','html'],function(){
     .pipe(revCollector({
         replaceReved: true,
     }))
-    .pipe(gulp.dest('app/dest/html'))
+    .pipe(gulp.dest('app/dest/html'));
 });
 
+
+gulp.task('move',function(){
+    gulp.src('./bower_components/*/**')
+    .pipe(gulp.dest('app/dest/js/bower_components'));
+})
 gulp.task('server',['del','js','styl','html','images','live'], function(done) {
     http.createServer(st({ path: __dirname + '/app/dest/', cache: false })).listen(8080, done);
 });

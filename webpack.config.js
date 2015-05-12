@@ -1,11 +1,13 @@
 var path = require('path');
 var fs   = require('fs');
 //模块文件的根路径
-var source_path = '/app/src/js/';
+var source_path      = '/app/src/js/';
+var bower_components = '/bower_components';
 var template = path.join(__dirname,source_path + 'template');
 var service  = path.join(__dirname,source_path + 'service');
 var common   = path.join(__dirname,source_path + 'common');
 var lib      = path.join(__dirname,source_path + 'lib');
+var bower    = path.join(__dirname,bower_components);
 //需要输出的文件路径
 var entry_path  = './app/src/js/pages';
 var entry_obj = {};
@@ -22,6 +24,6 @@ module.exports = {
        filename:'app/src/js/build/[name].build.js'
     },
     resolve:{
-       modulesDirectories:[service,template,common,lib]
+       modulesDirectories:[service,template,common,lib,bower]
     }
 };
